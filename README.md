@@ -29,9 +29,12 @@ for quick writing i gonna use my own language
 -    cd ~/PX4-Autopilot/Tools/sitl_gazebo/models
 -    cp -r iris/ custom
 -    #이제 custom 폴더에서 내용물 수정, meshes 에 필요한 stl 파일들 추가하고   
-![image](https://user-images.githubusercontent.com/72853382/123041974-170ac580-d431-11eb-8452-7233370f48a6.png)   
 
-여차저차 custom sdf 파일 만들고  
--    cd ~/PX4-Autopilot && DONT_RUN=1 make px4_sitl_default gazebo_iris_depth_camera   
-이걸로 확인해보면, 음 에러가 나는군요. https://discuss.px4.io/t/create-custom-model-for-sitl/6700/4 이걸 참고했는데
+여차저차 custom sdf 파일 만들고   
+음 stl 로 하니까 가제보 실행했을떄 줌에 문제가 생김   
+https://discuss.px4.io/t/cant-zoom-in-gazebo/20996/6 여기서 해결   
+이리저리 sdf 만들었고, 리얼센스 카메라 2개를 붙여주자
+
+   
+   
 
