@@ -27,10 +27,16 @@ now you can use custom vehicle model
 -----------------------------------------------------
 -----------------------------------------------------
 # setting custom vehicle model for rviz  
+- git clone https://github.com/beomsu7/px4-quadrotor-HW-parts
+- cd px4-quadrotor-HW-parts/
+- cp -r f450 ~/catkin_ws/src
+- cd ~/catkin_ws && catkin build f450 && source devel/setup.bash   
+now all propellers are cw shape... haha   
+![image](https://user-images.githubusercontent.com/72853382/123208424-01150780-d4fa-11eb-82a1-3314e1448d2d.png)
 
 -----------------------------------------------------
 ------------------------------------------------------
-for quick writing i gonna use my own language   
+# private notes for quick writing i gonna use my own language   
 *목적 : gazebo 와 rviz 에서 이쁜 모델로 쥬얼라이즈 하기 위해서 커스텀 sitl 모델 생성 에 대한 기록 및 정리용   
    
 (1) 솔리드 웍스를 이용하여 3d 모델을 생성하였다. 이때 thingiverse 에서 f450모델을 다운 받은후   
