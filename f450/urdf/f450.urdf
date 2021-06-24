@@ -4,26 +4,9 @@
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
   name="f450">
-  <link
-    name="base_link">
-    <inertial>
-      <origin
-        xyz="6.08798056411786E-09 8.07619533294002E-06 0.144032084321569"
-        rpy="0 0 0" />
-      <mass
-        value="0.37844186203839" />
-      <inertia
-        ixx="0.000314462827824931"
-        ixy="7.00039524842455E-12"
-        ixz="1.16261707892665E-12"
-        iyy="0.000708627569515456"
-        iyz="8.42367438096371E-11"
-        izz="0.00102261356077473" />
-    </inertial>
+
+  <link name="base_link">
     <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
       <geometry>
         <mesh
           filename="package://f450/meshes/base_link.STL" />
@@ -34,36 +17,10 @@
           rgba="0 0 0 1" />
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://f450/meshes/base_link.STL" />
-      </geometry>
-    </collision>
   </link>
-  <link
-    name="leg_link">
-    <inertial>
-      <origin
-        xyz="-3.28232996338329E-10 -3.54706042315911E-10 -0.0473020062630303"
-        rpy="0 0 0" />
-      <mass
-        value="0.0540891840555198" />
-      <inertia
-        ixx="0.000125380501920677"
-        ixy="7.34874705846881E-14"
-        ixz="-1.72893739794523E-13"
-        iyy="0.000125380501873988"
-        iyz="-1.25204758713388E-13"
-        izz="7.07252921665625E-05" />
-    </inertial>
+
+  <link name="leg_link">   
     <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
       <geometry>
         <mesh
           filename="package://f450/meshes/leg_link.STL" />
@@ -74,19 +31,9 @@
           rgba="1 1 1 1" />
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://f450/meshes/leg_link.STL" />
-      </geometry>
-    </collision>
   </link>
-  <joint
-    name="leg_link_join"
-    type="fixed">
+
+  <joint name="leg_link_joint" type="fixed">
     <origin
       xyz="0 0 0.132"
       rpy="0 0 0" />
@@ -97,22 +44,10 @@
     <axis
       xyz="0 0 0" />
   </joint>
+
   <link
     name="battery_link">
-    <inertial>
-      <origin
-        xyz="2.2204E-16 4.4409E-16 0.021"
-        rpy="0 0 0" />
-      <mass
-        value="0.19453" />
-      <inertia
-        ixx="4.2923E-05"
-        ixy="-1.0513E-17"
-        ixz="1.9731E-19"
-        iyy="0.00041696"
-        iyz="-3.0058E-20"
-        izz="0.00040304" />
-    </inertial>
+    
     <visual>
       <origin
         xyz="0 0 0"
@@ -127,15 +62,7 @@
           rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://f450/meshes/battery_link.STL" />
-      </geometry>
-    </collision>
+  
   </link>
   <joint
     name="battery_link_joint"
@@ -152,20 +79,7 @@
   </joint>
   <link
     name="jetson_link">
-    <inertial>
-      <origin
-        xyz="-0.0061137 -4.4409E-16 -0.019338"
-        rpy="0 0 0" />
-      <mass
-        value="0.49209" />
-      <inertia
-        ixx="0.00064924"
-        ixy="3.1713E-18"
-        ixz="-3.2108E-06"
-        iyy="0.00055531"
-        iyz="3.4154E-19"
-        izz="0.0010898" />
-    </inertial>
+    
     <visual>
       <origin
         xyz="0 0 0"
@@ -180,15 +94,7 @@
           rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://f450/meshes/jetson_link.STL" />
-      </geometry>
-    </collision>
+  
   </link>
   <joint
     name="jetson_link_joint"
@@ -205,20 +111,7 @@
   </joint>
   <link
     name="d435_link">
-    <inertial>
-      <origin
-        xyz="0.081851 -0.0015739 0.14489"
-        rpy="0 0 0" />
-      <mass
-        value="0.043919" />
-      <inertia
-        ixx="2.6619E-05"
-        ixy="-3.8865E-08"
-        ixz="-7.8416E-10"
-        iyy="3.7905E-06"
-        iyz="-3.5641E-10"
-        izz="2.6815E-05" />
-    </inertial>
+
     <visual>
       <origin
         xyz="0 0 0"
@@ -233,15 +126,7 @@
           rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://f450/meshes/d435_link.STL" />
-      </geometry>
-    </collision>
+    
   </link>
   <joint
     name="d435_link_joint"
@@ -258,20 +143,7 @@
   </joint>
   <link
     name="t265_link">
-    <inertial>
-      <origin
-        xyz="1.1102E-16 0.0084958 0.0057875"
-        rpy="0 0 0" />
-      <mass
-        value="0.02522" />
-      <inertia
-        ixx="2.3287E-05"
-        ixy="-1.3261E-20"
-        ixz="-1.9964E-21"
-        iyy="1.407E-06"
-        iyz="-7.9779E-08"
-        izz="2.4276E-05" />
-    </inertial>
+   
     <visual>
       <origin
         xyz="0 0 0"
@@ -286,15 +158,7 @@
           rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://f450/meshes/t265_link.STL" />
-      </geometry>
-    </collision>
+   
   </link>
   <joint
     name="t265_link_joint"
@@ -311,20 +175,7 @@
   </joint>
   <link
     name="front_arm_link">
-    <inertial>
-      <origin
-        xyz="-0.0089565 -0.09809 -0.0071207"
-        rpy="0 0 0" />
-      <mass
-        value="0.084665" />
-      <inertia
-        ixx="0.00016909"
-        ixy="-6.9774E-14"
-        ixz="-8.09E-06"
-        iyy="0.00016909"
-        iyz="2.1633E-10"
-        izz="0.00033135" />
-    </inertial>
+   
     <visual>
       <origin
         xyz="0 0 0"
@@ -339,15 +190,7 @@
           rgba="1 0 0 1" />
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://f450/meshes/front_arm_link.STL" />
-      </geometry>
-    </collision>
+  
   </link>
   <joint
     name="front_arm_link_joint"
@@ -364,20 +207,7 @@
   </joint>
   <link
     name="back_arm_link">
-    <inertial>
-      <origin
-        xyz="0.0089565 0.09809 -0.0071207"
-        rpy="0 0 0" />
-      <mass
-        value="0.084665" />
-      <inertia
-        ixx="0.00016909"
-        ixy="-1.5689E-14"
-        ixz="8.09E-06"
-        iyy="0.00016909"
-        iyz="-2.1629E-10"
-        izz="0.00033135" />
-    </inertial>
+   
     <visual>
       <origin
         xyz="0 0 0"
@@ -392,15 +222,7 @@
           rgba="1 1 1 1" />
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://f450/meshes/back_arm_link.STL" />
-      </geometry>
-    </collision>
+  
   </link>
   <joint
     name="back_arm_link_joint"
@@ -417,20 +239,7 @@
   </joint>
   <link
     name="prop_guard_link">
-    <inertial>
-      <origin
-        xyz="3.3619E-05 -3.3452E-06 0.0015"
-        rpy="0 0 0" />
-      <mass
-        value="0.084635" />
-      <inertia
-        ixx="0.00040912"
-        ixy="1.0752E-12"
-        ixz="-1.1324E-13"
-        iyy="0.00040932"
-        iyz="1.157E-13"
-        izz="0.00081832" />
-    </inertial>
+    
     <visual>
       <origin
         xyz="0 0 0"
@@ -445,15 +254,7 @@
           rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://f450/meshes/prop_guard_link.STL" />
-      </geometry>
-    </collision>
+    
   </link>
   <joint
     name="prop_guard_link_joint"
@@ -470,20 +271,7 @@
   </joint>
   <link
     name="motor_link">
-    <inertial>
-      <origin
-        xyz="0.00077732 -0.0001817 0.013912"
-        rpy="0 0 0" />
-      <mass
-        value="0.057143" />
-      <inertia
-        ixx="5.7889E-06"
-        ixy="-1.5882E-22"
-        ixz="-3.6525E-22"
-        iyy="5.7889E-06"
-        iyz="2.1435E-22"
-        izz="5.0078E-06" />
-    </inertial>
+   
     <visual>
       <origin
         xyz="0 0 0"
@@ -498,15 +286,7 @@
           rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://f450/meshes/motor_link.STL" />
-      </geometry>
-    </collision>
+  
   </link>
   <joint
     name="motor_link_joint"
@@ -523,20 +303,7 @@
   </joint>
   <link
     name="rotor1">
-    <inertial>
-      <origin
-        xyz="-2.6645E-15 -4.4409E-16 -0.0036905"
-        rpy="0 0 0" />
-      <mass
-        value="0.01285" />
-      <inertia
-        ixx="4.2273E-05"
-        ixy="-6.5451E-06"
-        ixz="-8.3141E-21"
-        iyy="1.721E-06"
-        iyz="3.0944E-21"
-        izz="4.3878E-05" />
-    </inertial>
+
     <visual>
       <origin
         xyz="0 0 0"
@@ -551,15 +318,7 @@
           rgba="1 1 1 1" />
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://f450/meshes/rotor1.STL" />
-      </geometry>
-    </collision>
+  
   </link>
   <joint
     name="rotor1_joint"
@@ -576,20 +335,7 @@
   </joint>
   <link
     name="rotor2">
-    <inertial>
-      <origin
-        xyz="-1.1102E-16 0 -0.023088"
-        rpy="0 0 0" />
-      <mass
-        value="0.014286" />
-      <inertia
-        ixx="1.4472E-06"
-        ixy="1.3235E-23"
-        ixz="-6.3838E-23"
-        iyy="1.4472E-06"
-        iyz="6.3899E-23"
-        izz="1.2519E-06" />
-    </inertial>
+  
     <visual>
       <origin
         xyz="0 0 0"
@@ -604,15 +350,7 @@
           rgba="1 1 1 1" />
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://f450/meshes/rotor1.STL" />
-      </geometry>
-    </collision>
+    
   </link>
   <joint
     name="rotor2_joint"
@@ -629,20 +367,7 @@
   </joint>
   <link
     name="rotor3">
-    <inertial>
-      <origin
-        xyz="0 0 -0.023088"
-        rpy="0 0 0" />
-      <mass
-        value="0.014286" />
-      <inertia
-        ixx="1.4472E-06"
-        ixy="1.3235E-23"
-        ixz="-8.898E-23"
-        iyy="1.4472E-06"
-        iyz="6.7413E-23"
-        izz="1.2519E-06" />
-    </inertial>
+   
     <visual>
       <origin
         xyz="0 0 0"
@@ -657,15 +382,7 @@
           rgba="1 1 1 1" />
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://f450/meshes/rotor1.STL" />
-      </geometry>
-    </collision>
+    
   </link>
   <joint
     name="rotor3_joint"
@@ -682,20 +399,7 @@
   </joint>
   <link
     name="rotor4">
-    <inertial>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <mass
-        value="0" />
-      <inertia
-        ixx="0"
-        ixy="0"
-        ixz="0"
-        iyy="0"
-        iyz="0"
-        izz="0" />
-    </inertial>
+  
     <visual>
       <origin
         xyz="0 0 0"
@@ -710,15 +414,7 @@
           rgba="1 1 1 1" />
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://f450/meshes/rotor1.STL" />
-      </geometry>
-    </collision>
+ 
   </link>
   <joint
     name="rotor4_joint"
