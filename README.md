@@ -33,6 +33,17 @@ now you can use custom vehicle model
 - cd ~/catkin_ws && catkin build f450 && source devel/setup.bash   
 now all propellers are cw shape... haha   
 ![image](https://user-images.githubusercontent.com/72853382/123208424-01150780-d4fa-11eb-82a1-3314e1448d2d.png)
+   
+final result is   
+![image](https://user-images.githubusercontent.com/72853382/123212355-a54d7d00-d4ff-11eb-8314-1678fed25efa.png)
+
+-----------------------------------------------------
+-----------------------------------------------------
+# for more nice visualization in rviz
+
+now in rviz the propeller is static, for simple trick you can put cylinder intead of propeller   
+but for more detailed visualization rotating the propeller when the mavros/state is armed
+
 
 -----------------------------------------------------
 ------------------------------------------------------
