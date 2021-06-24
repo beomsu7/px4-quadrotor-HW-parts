@@ -3,8 +3,30 @@ storage for 3d printing parts of px4 quadrotor equipped with D435 and T265
 
 -----------------------------------------------------
 -----------------------------------------------------
-# setting custom vehicle model for px4 sitl
+# setting custom vehicle model for px4 sitl gazebo   
+this is how to add new custom quadrotor visual stuff for px4 sitl gazebo   
+the default quadrotor's model is iris and my process is just changing the visual part   
+every actual parts including motor plugin, gps, etc  is same with px4-autopilot's origin
 
+- git clone https://github.com/beomsu7/px4-quadrotor-HW-parts
+- cd px4-quadrotor-HW-parts/
+- cp -r custom_f450/ ~/PX4-Autopilot/Tools/sitl_gazebo/models/
+- cp 1026_custom_f450 ~/PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/airframes/
+- gedit ~/PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/airframes/CMakeLists.txt 
+- // add '1026_custom_f450' in px4_add_romfs_files   
+![image](https://user-images.githubusercontent.com/72853382/123205978-c7420200-d4f5-11eb-9d3c-18efe1396352.png)
+- gedit ~/PX4-Autopilot/platforms/posix/cmake/sitl_target.cmake
+- // add 'custom_f450' in set(models   
+![image](https://user-images.githubusercontent.com/72853382/123206638-002ea680-d4f7-11eb-8a03-abc48138b966.png)   
+- cd ~/PX4-Autopilot/ && make px4_sitl gazebo_custom_f450   
+![image](https://user-images.githubusercontent.com/72853382/123206971-91058200-d4f7-11eb-8d8a-859c902a251b.png)
+   
+now you can use custom vehicle model
+![image](https://user-images.githubusercontent.com/72853382/123207148-e346a300-d4f7-11eb-86e4-7b97f5d3f328.png)
+
+-----------------------------------------------------
+-----------------------------------------------------
+# setting custom vehicle model for rviz  
 
 -----------------------------------------------------
 ------------------------------------------------------
