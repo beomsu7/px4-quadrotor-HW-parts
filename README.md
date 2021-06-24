@@ -16,19 +16,19 @@ for quick writing i gonna use my own language
 ![image](https://user-images.githubusercontent.com/72853382/123039873-ce054200-d42d-11eb-8221-0bb0a05545d3.png)
    
       
-(5) 기본적인 준비는 끝났으니 이제 px4의 iris.sdf를 기반으로 바꿔주려한다.
+(5) 기본적인 준비는 끝났으니 이제 px4의 iris.sdf를 기반으로 바꿔주려한다. 참고 https://discuss.px4.io/t/create-custom-model-for-sitl/6700   
 -    cd ~/PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/airframes
--    cp 101_iris_rtps 1025_custom
+-    cp 101_iris_rtps 1025_custom_f450
 -    gedit CMakeLists.txt
--    #여기서 1025_custom 추가해줍시다
--    #뎁스카메라부분은 저는 이미 추가되어있으므로, 여기 참고 https://github.com/beomsu7/Fast-Planner
+-    #여기서 1025_custom_f450 추가해줍시다
 -    sudo gedit ~/PX4-Autopilot/platforms/posix/cmake/sitl_target.cmake
--    #set(models 부분에 custom 추가해주고, 대충 110번째 줄 정도?
+-    #set(models 부분에 'custom_f450' 추가해주고, 대충 110번째 줄 정도?
 -    #그러고는 ~/PX4-Autopilot/Tools/sitl_gazebo/models 에 custom 이라는 이름으로 폴더 만들고 내용물 채우면됨
 -    
 -    cd ~/PX4-Autopilot/Tools/sitl_gazebo/models
--    cp -r iris/ custom
+-    cp -r iris/ custom_f450
 -    #이제 custom 폴더에서 내용물 수정, meshes 에 필요한 stl 파일들 추가하고   
+-    #위와 같이 만들어도 되나 시간이 없다면 해당 깃허브의 custom_f450.zip 압축 해제
 
 여차저차 custom sdf 파일 만들고   
 음 stl 로 하니까 가제보 실행했을떄 줌에 문제가 생김   
