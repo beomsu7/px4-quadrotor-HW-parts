@@ -1,9 +1,15 @@
 # px4-quadrotor-HW-parts
 storage for 3d printing parts of px4 quadrotor equipped with D435 and T265
 
-for quick writing i gonna use my own language
+-----------------------------------------------------
+-----------------------------------------------------
+# setting custom vehicle model for px4 sitl
 
-*목적 : gazebo 와 rviz 에서 이쁜 모델로 쥬얼라이즈 하기 위해서 커스텀 sitl 모델 생성   
+
+-----------------------------------------------------
+------------------------------------------------------
+for quick writing i gonna use my own language   
+*목적 : gazebo 와 rviz 에서 이쁜 모델로 쥬얼라이즈 하기 위해서 커스텀 sitl 모델 생성 에 대한 기록 및 정리용   
    
 (1) 솔리드 웍스를 이용하여 3d 모델을 생성하였다. 이때 thingiverse 에서 f450모델을 다운 받은후   
 몇몇 부분 수정과 추가를 통해 만들었다.   
