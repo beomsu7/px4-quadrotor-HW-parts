@@ -34,7 +34,12 @@ for quick writing i gonna use my own language
 음 stl 로 하니까 가제보 실행했을떄 줌에 문제가 생김   
 https://discuss.px4.io/t/cant-zoom-in-gazebo/20996/6 여기서 해결   
 이리저리 sdf 만들었고, 리얼센스 카메라 2개를 붙여주자
+   
+프로펠러의 경우 곡면이 이쁘게 만들기 어려우므로 그냥 iris 의 프로펠러를 사용한다만 색만 바꿔서   
+iris 프로펠러 ccw 방향의 경우 중심점이 안맞아서   
+![image](https://user-images.githubusercontent.com/72853382/123187885-ffd1e380-d4d5-11eb-90d7-128c84605dfe.png)   
 
+블렌더를 이용하여 중심점을 맞추어주고, 결과적으로 sdf 파일을 완성하였다.   
    
-   
+![image](https://user-images.githubusercontent.com/72853382/123188267-b3d36e80-d4d6-11eb-97e6-f546984452f6.png)
 
