@@ -39,11 +39,6 @@ final result is
 
 -----------------------------------------------------
 -----------------------------------------------------
-# for more nice visualization in rviz
-
-now in rviz the propeller is static, for simple trick you can put cylinder intead of propeller   
-but for more detailed visualization rotating the propeller when the mavros/state is armed
-
 
 -----------------------------------------------------
 ------------------------------------------------------
