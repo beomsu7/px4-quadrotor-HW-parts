@@ -1,0 +1,16 @@
+Impreso en PLA usando Slic3r
+Brazos al 30%
+Resto al 20%
+
+patas para hacerlas bicolor se cambia el color a los 2 y 8mm (2.10 y 8.10, poner alto de capa inicial a 0.25)
+Peso:
+Brazo 36.27g (+1 de los inserts=37.27
+Placa inferior 28.9g
+placa sup=13.8g
+soporte GPS 6.7g (sup=1.7, inf=2.6, rod85=2.3)
+APM damp (sin gomas)4.7g (base=0.65c/u, sup=3.5)
+Patas largas 13.6g c/u
+patas medianas:8.8 c/u
+patas peq:7.8 c/u
+
+PacaSup+placaInf+4brazosConInserts=191.7
